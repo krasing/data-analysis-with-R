@@ -39,7 +39,7 @@ Data mungling, [Tidy Data by Hadley Wickham] (http://vita.had.co.nz/papers/tidy-
     library(scales)
     library(memisc)
 
-## Code snippets
+## First steps
 
 ### Load data
 
@@ -50,7 +50,7 @@ Data mungling, [Tidy Data by Hadley Wickham] (http://vita.had.co.nz/papers/tidy-
 
     head(income)
     dim(income)
-    names(income)
+    names(income) # get all variables
     str(income)
     summary(income)
 
@@ -69,3 +69,41 @@ Data mungling, [Tidy Data by Hadley Wickham] (http://vita.had.co.nz/papers/tidy-
     levels = c("low", "middle", "high")
     reddit$age.range <- factor(reddit$age.range, levels=levels, ordered = TRUE)
 
+## Single variables
+
+Basic statistics (mean, median, boxplots, and histograms) and the qplot syntax in R
+
+Let the data surprise you! What is going on with youd data? Which are the most central variables?
+Define a question you are trying to answer, e.g. comparison of two groups,
+Whether people perception for their audience matches the reality, who actually is seeing the content they are sharing.
+Detecting anomalities is important. As example, more values for a default value in a survey
+
+    qplot(x = dob_day, data = pf) +
+      scale_x_discrete(breaks = 1:31) +
+      facet_wrap(~dob_month, ncol = 3)
+      
+      facet_grid(vertical ~ horizontal, ncol = 3)
+      
+    ggplot(data = pf, aes(x = dob_day)) + 
+      geom_histogram() + 
+       scale_x_discrete(breaks = 1:31) + 
+       facet_wrap(~dob_month)
+       
+[Facets link] (http://www.cookbook-r.com/Graphs/Facets_(ggplot2)/)
+
+### Limiting the axes
+    qplot(data = pf, x = friend_count, xlim = c(0, 1000))
+    
+    qplot(data = pf, x = friend_count) +
+      scale_x_continuous(limits = c(0, 1000))
+    # layer was added
+    
+### Adjusting the bin width
+    qplot(data = pf, x = friend_count, binwidth = 25) +
+      scale_x_continuous(limits = c(0, 1000), breaks = seq(0, 1000, 50))
+      
+    ggplot(aes(x = friend_count), data = pf) + 
+      geom_histogram(binwidth = 25) + 
+      scale_x_continuous(limits = c(0, 1000), breaks = seq(0, 1000, 50))
+
+[Scales in ggplot2](http://docs.ggplot2.org/current/scale_continuous.html)
