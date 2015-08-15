@@ -107,3 +107,8 @@ Detecting anomalities is important. As example, more values for a default value 
       scale_x_continuous(limits = c(0, 1000), breaks = seq(0, 1000, 50))
 
 [Scales in ggplot2](http://docs.ggplot2.org/current/scale_continuous.html)
+
+### Omitting NA observations
+    # in the equation abobe use:
+    data = subset(pf, !is.na(gender))  # remove records with missing gender info
+    data = na.omit(pf)  # remove records with any missing data
