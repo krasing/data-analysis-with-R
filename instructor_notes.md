@@ -207,7 +207,7 @@ Looking at:
                          breaks = seq(0, 1000, 50)) +
       facet_wrap(~gender)
       
-By default qplot creates frequency histogram when passed one variable. Use geom parameter to tell it to do something else, e.g. geom = 'freqpoly' to generate fequency poligon.
+By default qplot creates frequency histogram when passed one variable. Use geom parameter to tell it to do something else, e.g. `geom = 'freqpoly'` to generate fequency poligon.
 
 The layer `facet_wrap(~gender)` can be replaced by parameter `color = gender` to have both lines on a single plot.
 
@@ -251,16 +251,42 @@ summary(pf$mobile_check_in)
 summary(pf$mobile_check_in) / sum(summary(pf$mobile_check_in))
 
 sum(pf$mobile_check_in == 1) / length(pf$mobile_check_in)
-
+```
 
 ### Summary
-- Take a close look at the individual variables in your datasets
-  - types of values
-  - distribution shape
-  - are there missing values or outliers
+
+  - Take a close look at the individual variables in your datasets
+    - types of values
+    - distribution shape
+    - are there missing values or outliers
 
 ### Save image
-ggsave() will save the last plot created. Recognised the extensions:
+
+`ggsave()` will save the last plot created. Recognised the extensions:
 eps/ps, tex (pictex), pdf, jpeg, tiff, png, bmp, svg and wmf (windows only).
 
     ggsave('priceHistogram.png')
+
+## Data Wrangling with R
+
+Data munging or data wrangling can take up much of a data scientist's or data analyst's time. There are two R packages that make these tasks easier in R: tidyr and dplyr.
+
+`tidyr` - a package that reshapes the layout of your data
+
+`dplyr` - a package that helps you transform tidy, tabular data
+
+Review [Data Wrangling in R](#) to get a sense of how these packages allow you to manipulate data. You can use these packages to help you in the next programming task and in your future investigations.
+
+You may also download this useful [Data Wrangling Cheat Sheet] (http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf). There are some other useful cheat sheets at [RStudio] (http://www.rstudio.com/resources/cheatsheets/).
+
+### Gapminder Data 
+
+[Gapminder Data](http://www.gapminder.org/data/)
+
+[Hans Rosling's 200 Countries, 200 Years, 4 Minutes] (https://www.youtube.com/watch?v=jbkSRLYSojo) 
+
+Save plots using ggsave()
+
+The following command may be helpful for some of the Gapminder Data sets, once it's been converted to csv format: `read.csv('data.csv', header = T, row.names = 1, check.names = F)`. You may want to look at additional function arguments in the help file for the `read.table()` family for additional tools that can help you read in data.
+
+If you want to exchange the rows and columns of your dataframe, it will also be useful to know the transpose function, `t()`.
