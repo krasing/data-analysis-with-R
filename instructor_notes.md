@@ -278,6 +278,7 @@ Review [Data Wrangling in R](#) to get a sense of how these packages allow you t
 You may also download this useful [Data Wrangling Cheat Sheet] (http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf). There are some other useful cheat sheets at [RStudio] (http://www.rstudio.com/resources/cheatsheets/).
 
 ### Gapminder Data 
+
 [Gapminder Data](http://www.gapminder.org/data/)
 
 [Hans Rosling's 200 Countries, 200 Years, 4 Minutes] (https://www.youtube.com/watch?v=jbkSRLYSojo) 
