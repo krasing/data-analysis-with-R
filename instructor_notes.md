@@ -251,7 +251,7 @@ summary(pf$mobile_check_in)
 summary(pf$mobile_check_in) / sum(summary(pf$mobile_check_in))
 
 sum(pf$mobile_check_in == 1) / length(pf$mobile_check_in)
-
+```
 
 ### Summary
 
@@ -271,9 +271,9 @@ eps/ps, tex (pictex), pdf, jpeg, tiff, png, bmp, svg and wmf (windows only).
 
 Data munging or data wrangling can take up much of a data scientist's or data analyst's time. There are two R packages that make these tasks easier in R: tidyr and dplyr.
 
-tidyr -a package that reshapes the layout of your data
+`tidyr` - a package that reshapes the layout of your data
 
-dplyr - a package that helps you transform tidy, tabular data
+`dplyr` - a package that helps you transform tidy, tabular data
 
 Review [Data Wrangling in R](#) to get a sense of how these packages allow you to manipulate data. You can use these packages to help you in the next programming task and in your future investigations.
 
