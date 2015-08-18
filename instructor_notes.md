@@ -254,13 +254,15 @@ sum(pf$mobile_check_in == 1) / length(pf$mobile_check_in)
 
 
 ### Summary
-- Take a close look at the individual variables in your datasets
-  - types of values
-  - distribution shape
-  - are there missing values or outliers
+
+  - Take a close look at the individual variables in your datasets
+    - types of values
+    - distribution shape
+    - are there missing values or outliers
 
 ### Save image
-ggsave() will save the last plot created. Recognised the extensions:
+
+`ggsave()` will save the last plot created. Recognised the extensions:
 eps/ps, tex (pictex), pdf, jpeg, tiff, png, bmp, svg and wmf (windows only).
 
     ggsave('priceHistogram.png')
