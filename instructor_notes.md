@@ -207,7 +207,7 @@ Looking at:
                          breaks = seq(0, 1000, 50)) +
       facet_wrap(~gender)
       
-By default qplot creates frequency histogram when passed one variable. Use geom parameter to tell it to do something else, e.g. geom = 'freqpoly' to generate fequency poligon.
+By default qplot creates frequency histogram when passed one variable. Use geom parameter to tell it to do something else, e.g. `geom = 'freqpoly'` to generate fequency poligon.
 
 The layer `facet_wrap(~gender)` can be replaced by parameter `color = gender` to have both lines on a single plot.
 
