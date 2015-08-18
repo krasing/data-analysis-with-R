@@ -44,7 +44,9 @@ Data mungling, [Tidy Data by Hadley Wickham] (http://vita.had.co.nz/papers/tidy-
 ## First steps
 
 ### Load data
-
+    
+    getwd()
+    list.files()
     income <- read.csv("data/ACS_13_5YR_S1903/ACS_13_5YR_S1903.csv",
         stringsAsFactors=FALSE, sep=",", colClasses=c("GEO.id2"="character"))
 
@@ -90,8 +92,13 @@ Detecting anomalities is important. As example, more values for a default value 
       geom_histogram() + 
        scale_x_discrete(breaks = 1:31) + 
        facet_wrap(~dob_month)
-       
+
+### Facets
 [Facets link] (http://www.cookbook-r.com/Graphs/Facets_(ggplot2)/)
+By default all graphs have the same axes scales.
+This can be changed - [free scales] (http://www.cookbook-r.com/Graphs/Facets_(ggplot2))
+add parameter scales="free_y"
+
 
 ### Limiting the axes
 
@@ -122,6 +129,10 @@ Detecting anomalities is important. As example, more values for a default value 
 ### *Statistics by category*
 
     by(pf$friend_count, pf$gender, summary)
+    
+    # find the interquartile range    
+    IQR(subset(diamonds, price <1000)$price)
+
 
 ### Adding color
 
@@ -247,4 +258,9 @@ sum(pf$mobile_check_in == 1) / length(pf$mobile_check_in)
   - types of values
   - distribution shape
   - are there missing values or outliers
-  - 
+
+### Save image
+ggsave() will save the last plot created. Recognised the extensions:
+eps/ps, tex (pictex), pdf, jpeg, tiff, png, bmp, svg and wmf (windows only).
+
+    ggsave('priceHistogram.png')
