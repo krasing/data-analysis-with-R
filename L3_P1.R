@@ -142,7 +142,67 @@ qplot(x = price, data = diamonds) + facet_wrap(~cut, scales="free_y")
 # Adjust the bin width and transform the scale
 # of the x-axis using log10.
 
-# Submit your final code when you are ready.
+# Did you find normal-ish distributions and a slightly bimodal distribution for Very Good cuts?
+# (If the Very Good facet looks smooth, try decreasing your bin width!
+# If the data looks skewed, did you remember to perform a log10 transform?)
 
 # ENTER YOUR CODE BELOW THIS LINE.
 # ===========================================================================
+qplot(x = price/carat, data = diamonds, binwidth = 0.05) +
+  facet_wrap(~cut, scales="free_y") +
+  scale_x_log10()
+
+
+# Investigate the price of diamonds using box plots,
+# numerical summaries, and one of the following categorical
+# variables: cut, clarity, or color.
+
+# There won’t be a solution video for this
+# exercise so go to the discussion thread for either
+# BOXPLOTS BY CLARITY, BOXPLOT BY COLOR, or BOXPLOTS BY CUT
+# to share you thoughts and to
+# see what other people found.
+
+# Copy and paste all of the code that you used for
+# your investigation, and submit it when you are ready.
+# =================================================================
+qplot(x = cut, y = price,
+      data = diamonds,
+      geom = 'boxplot')
+
+qplot(x = color, y = price,
+      data = diamonds,
+      geom = 'boxplot')
+
+qplot(x = clarity, y = price,
+      data = diamonds,
+      geom = 'boxplot')
+
+
+
+by(diamonds$price/diamonds$carat, diamonds$cut, summary)
+
+by(diamonds$price/diamonds$carat, diamonds$color, summary)
+
+by(diamonds$price, diamonds$color, summary)
+IQR(subset(diamonds, color == 'J')$price)
+IQR(subset(diamonds, color == 'D')$price)
+
+# Investigate the price per carat of diamonds across
+# the different colors of diamonds using boxplots.
+
+# SUBMIT YOUR CODE BELOW THIS LINE
+# ===================================================================
+
+qplot(x = cut, y = price/carat,
+      data = diamonds,
+      geom = 'boxplot')
+
+qplot(x = color, y = price/carat,
+      data = diamonds,
+      geom = 'boxplot')
+
+qplot(x = clarity, y = price/carat,
+      data = diamonds,
+      geom = 'boxplot')
+
