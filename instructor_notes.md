@@ -380,3 +380,7 @@ To zoom in, the code should use `thecoord_cartesian(xlim = c(13, 90))` layer rat
 Look up documentation for `coord_cartesian()` and `quantile()` if you're unfamiliar with them. 
 
 Try an example and practice problem for calculating [quantiles (percentiles)] (http://www.r-tutor.com/elementary-statistics/numerical-measures/percentile).
+
+See Moira's final plot and how she aligned the histograms with the scatterplots in the published paper.
+
+[Bernstein, M. S., Bakshy, E., Burke, M., & Karrer, B. (2013). Quantifying the invisible audience in social networks. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2013), pp. 21-30.] (http://hci.stanford.edu/publications/2013/invisibleaudience/invisibleaudience.pdf)
