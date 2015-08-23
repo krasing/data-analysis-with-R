@@ -355,7 +355,7 @@ geom_point(alpha = 1/20)
 
 [coord_trans()](http://docs.ggplot2.org/current/coord_trans.html)
 
-### instructor note
+### Instructor notes
 
 *Important Notice!* Please note that in newer versions of dplyr (0.3.x+), the syntax %.% has been deprecated and replaced with %>%. To run your code in the Udacity IDE you must use %.%, but if you are following along on your local machine and using R, this may produce warning messages, in which case you should use %>% instead.
 
@@ -372,3 +372,11 @@ The following tutorials are presented by Hadley Wickham at useR 2014.
  - [dplyr Tutorial Part 2] (http://www.r-bloggers.com/hadley-wickhams-dplyr-tutorial-at-user-2014-part-2/)
  
 There are other ways to work with data and create new data frames without using the dplyr package. Learn about the R functions `lapply`, `tapply`, and `split` in a [blog post] (http://rollingyours.wordpress.com/2014/10/20/the-lapply-command-101/).
+
+### Instructor Notes
+
+To zoom in, the code should use `thecoord_cartesian(xlim = c(13, 90))` layer rather than `xlim(13, 90)` layer.
+
+Look up documentation for `coord_cartesian()` and `quantile()` if you're unfamiliar with them. 
+
+Try an example and practice problem for calculating [quantiles (percentiles)] (http://www.r-tutor.com/elementary-statistics/numerical-measures/percentile).
