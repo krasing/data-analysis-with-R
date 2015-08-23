@@ -33,13 +33,20 @@ Data mungling, [Tidy Data by Hadley Wickham] (http://vita.had.co.nz/papers/tidy-
 
 ## Packages used
 
-* knitr
+    * knitr
     library(ggplot2)
     library(gridExtra)
     library(psych)
     library(dplyr)  # error
     library(scales)
     library(memisc)
+
+    
+    install.packages("dplyr")
+    Error: package ‘Rcpp’ 0.11.3 was found, but >= 0.11.6 is required by ‘dplyr’
+    install.packages("~/Downloads/Rcpp_0.12.0.tar.gz", repos = NULL, type = "source")
+    install.packages("dplyr")
+    install.packages("tidyr")
 
 ## First steps
 
@@ -279,6 +286,23 @@ Review [Data Wrangling in R](#) to get a sense of how these packages allow you t
 
 You may also download this useful [Data Wrangling Cheat Sheet] (http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf). There are some other useful cheat sheets at [RStudio] (http://www.rstudio.com/resources/cheatsheets/).
 
+Colapse multiple columns into two columns:
+
+    gather(dataframe, 'new_key', 'new_value', col2:col4)
+
+Spread - generate multiple columns from two columns:
+
+    spread(dataset, keys_column, values_column)
+    
+Separate - split a column by a character string separator:
+
+    separate(storms, date, c("year", "month", "day"), sep = "-")
+
+Unite columns into a single column.
+
+    unite(storms2, "date", year, month, day, sep = "-")
+
+
 ### Gapminder Data 
 
 [Gapminder Data](http://www.gapminder.org/data/)
@@ -290,3 +314,61 @@ Save plots using ggsave()
 The following command may be helpful for some of the Gapminder Data sets, once it's been converted to csv format: `read.csv('data.csv', header = T, row.names = 1, check.names = F)`. You may want to look at additional function arguments in the help file for the `read.table()` family for additional tools that can help you read in data.
 
 If you want to exchange the rows and columns of your dataframe, it will also be useful to know the transpose function, `t()`.
+
+### Exploring Your Friends' Birthdays
+
+[Download Your Friends' Birthdays from Facebook] (https://www.facebook.com/help/152652248136178/)
+
+[Date Formats in R] (http://www.r-bloggers.com/date-formats-in-r)
+
+[Export a Google Calendar] (https://support.google.com/calendar/answer/37111?hl=en)
+
+[Google Calendar to Excel: Free Trial](http://www.gcal2excel.com/)
+
+### Dates
+
+    birthdays$month <- ordered(strftime(birthdays$dates, '%b'), levels = month.abb)
+    
+
+## Two variables
+
+```r
+qplot(x = age, y = friend_count, data = pf)
+
+qplot(age, friend_count, data = pf)
+
+ggplot(aes(x = age, y = friend_count), data = pf) + 
+  geom_point(alpha = 1/20, position=position_jitter(h=0))  +
+  xlim(30,90) +
+  coord_trans()
+```
+
+    geom_point(position='jitter')
+
+### ggplot
+
+[ggplot2 graphics] (http://docs.ggplot2.org/current/)
+
+[ggplot2 tutorial by Ramon Saccilotto] (http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf)
+
+geom_point(alpha = 1/20) 
+
+[coord_trans()](http://docs.ggplot2.org/current/coord_trans.html)
+
+### instructor note
+
+*Important Notice!* Please note that in newer versions of dplyr (0.3.x+), the syntax %.% has been deprecated and replaced with %>%. To run your code in the Udacity IDE you must use %.%, but if you are following along on your local machine and using R, this may produce warning messages, in which case you should use %>% instead.
+
+Another warning: Version 0.4 of R has a bug when using the median function on the summarize layer, depending on the nature of the data being summarized. You may need to cast the data as a numeric (float) type when using it on your local machine, e.g. `median(as.numeric(var))`.
+
+Learn more about the [dplyr package](http://blog.rstudio.org/2014/01/17/introducing-dplyr/). 
+
+[Introduction to dplyr] (http://rstudio-pubs-static.s3.amazonaws.com/11068_8bc42d6df61341b2bed45e9a9a3bf9f4.html) (knitted html file)
+
+The following tutorials are presented by Hadley Wickham at useR 2014.
+
+ - [Introduction of dplyr] (http://www.r-bloggers.com/hadley-wickham-presents-dplyr-at-user-2014/)
+ - [dplyr Tutorial Part 1] (http://www.r-bloggers.com/hadley-wickhams-dplyr-tutorial-at-user-2014-part-1/)
+ - [dplyr Tutorial Part 2] (http://www.r-bloggers.com/hadley-wickhams-dplyr-tutorial-at-user-2014-part-2/)
+ 
+There are other ways to work with data and create new data frames without using the dplyr package. Learn about the R functions `lapply`, `tapply`, and `split` in a [blog post] (http://rollingyours.wordpress.com/2014/10/20/the-lapply-command-101/).
