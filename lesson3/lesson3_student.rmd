@@ -99,9 +99,9 @@ qplot(data = pf, x = friend_count)
 ```
 
 #### How is this plot similar to Moira's first plot?
-Response:
+Response: Most of the data are in the left part of the graph. Exponential shape
 
-*** Most of the data are in the left part of the graph. Exponential shape
+*** 
 
 ### Limiting the Axes
 Notes:
@@ -131,7 +131,9 @@ qplot(x = friend_count, data = pf, binwidth = 10) +
                      breaks = seq(0, 1000, 50)) +
   facet_wrap(~gender)
 ```
+
 In the alternate solution below, the period or dot in the formula for facet_grid() represents all of the other variables in the data set. Essentially, this notation splits up the data by gender and produces three histograms, each having their own row. 
+
 ```{r}
     qplot(x = friend_count, data = pf) + 
       facet_grid(gender ~ .) 

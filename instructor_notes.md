@@ -384,3 +384,45 @@ Try an example and practice problem for calculating [quantiles (percentiles)] (h
 See Moira's final plot and how she aligned the histograms with the scatterplots in the published paper.
 
 [Bernstein, M. S., Bakshy, E., Burke, M., & Karrer, B. (2013). Quantifying the invisible audience in social networks. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2013), pp. 21-30.] (http://hci.stanford.edu/publications/2013/invisibleaudience/invisibleaudience.pdf)
+
+### Correlations
+
+[Correlation Methods: Pearson's r, Spearman's rho, and Kendall's tau] (http://www.statisticssolutions.com/correlation-pearson-kendall-spearman/)
+
+### Instructor Notes
+
+Argument matching (when not providing them by name) in R is a bit complex.
+
+First, arguments (or parameters) can be matched by name. If a parameter matches exactly, it is "removed" from the argument list and the remaining unnamed arguments are matched in the order that they are listed in the function definition.
+
+R does the following to match arguments... 
+
+checks for exact match of named argument
+checks for a partial match of the argument
+checks for a positional match
+If R does not find a match for a parameter, it typically throws an "unused" parameter error.
+
+Type `str(functionName)` to find the order of the parameters and learn more about the parameters of an R function. 
+
+The example covered in the next few videos comes from a practice problem in [Weisberg, S. (2005). Applied Linear Regression, 3rd edition. New York: Wiley] (http://users.stat.umn.edu/~sandy/alr3ed/website/).
+
+### Instructor notes
+
+
+The cor and cor.test functions determine the strength of a linear relationship, but they may miss other relationships in the data, e.g. if there is a cyclical pattern.
+
+    ggplot(aes(x=(Month%%12),y=Temp),data=Mitchell)+ geom_point() 
+
+**Data Visualization Pioneers**
+
+ - [John Tukey] (http://en.wikipedia.org/wiki/John_Tukey)
+ - [William Playfair] (http://en.wikipedia.org/wiki/William_Playfair)
+ - [William Playfair and the Psychology of Graphs](http://www.psych.utoronto.ca/users/spence/Spence%20(2006).pdf)
+
+There are other measures of associations that can detect this. The `dcor.ttest()` function in the energy package implements a non-parametric test of the independence of two variables. The test correctly rejects the independence.
+
+### Smoothing conditional means
+
+[Local Regression (LOESS)] (http://simplystatistics.org/2014/02/13/loess-explained-in-a-gif/) explained visually on the [Simply Statistics] (http://simplystatistics.org/) blog.
+
+The Details of [Loess and Lowess] (http://en.wikipedia.org/wiki/Local_regression)
