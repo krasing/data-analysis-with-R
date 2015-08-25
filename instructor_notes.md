@@ -426,3 +426,9 @@ There are other measures of associations that can detect this. The `dcor.ttest()
 [Local Regression (LOESS)] (http://simplystatistics.org/2014/02/13/loess-explained-in-a-gif/) explained visually on the [Simply Statistics] (http://simplystatistics.org/) blog.
 
 The Details of [Loess and Lowess] (http://en.wikipedia.org/wiki/Local_regression)
+
+### Final notes
+
+A deep dive into [Bivariate Data Analysis] (http://dept.stat.lsa.umich.edu/~kshedden/Courses/Stat401/Notes/401-bivariate-slides.pdf).
+
+Create a [concept map] (http://www.mindmapinspiration.com/) examples
