@@ -302,6 +302,24 @@ Unite columns into a single column.
 
     unite(storms2, "date", year, month, day, sep = "-")
 
+Using *dplyr*
+
+`library(dplyr)`
+
+```r
+age_groups <- group_by(pf, age)
+fc_by_age <- summarize(age_groups, friend_count_mean = mean(friend_count), n = n())
+pf.fc_by_age <- arrange(fc_by_age, age)
+```
+
+```r
+pf.fc_by_age <- pf %>%
+  group_by(age) %>%
+  summarize(friend_count_mean = mean(friend_count),
+            friend_count_median = median(friend_count),
+            n = n()) %>%
+  arrange(age)
+```
 
 ### Gapminder Data 
 
@@ -344,6 +362,45 @@ ggplot(aes(x = age, y = friend_count), data = pf) +
 ```
 
     geom_point(position='jitter')
+    
+### Summaries
+
+```r
+% first calculate the summaries, e.g. using plyr
+ggplot(aes(age, friend_count_mean), data = pf.fc_by_age) + geom_line()
+```
+    
+### Overlaying Summaries with Raw Data
+
+```r
+g1 <- ggplot(aes(x = age, y = friend_count), data = pf) + geom_point(') +
+  coord_trans(y = 'sqrt') + 
+  geom_line(stat = 'summary', fun.y = mean) +
+  geom_line(stat = 'summary', fun.y = quantile, probs=0.1,
+    linetype = 2, color = 'blue') +
+g1 + coord_cartesian(xlim = c(30, 65))
+g1 + coord_cartesian(xlim = c(13, 30), ylim = c(0,1000))
+```
+
+### Smoothing Conditional Means
+```r
+p1 <- ggplot(aes(x = age_with_months, y = friend_count_mean), 
+       data = subset(pf.fc_by_age_months, age_with_months < 71)) +
+  geom_line() +
+  geom_smooth()
+
+p2 <- ggplot(aes(age, friend_count_mean),
+       data = subset(pf.fc_by_age, age < 71)) + 
+  geom_line() +
+  geom_smooth()
+  
+p3 <- ggplot(aes(x = round(age/5)*5, y = friend_count), 
+       data = subset(pf, age < 71)) +
+  geom_line(stat = 'summary', fun.y = mean)
+```
+
+library('gridExtra')
+grid.arrange(p1, p2, p3, ncol = 1)
 
 ### ggplot
 
