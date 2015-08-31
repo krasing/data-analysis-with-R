@@ -427,8 +427,13 @@ There are other measures of associations that can detect this. The `dcor.ttest()
 
 The Details of [Loess and Lowess] (http://en.wikipedia.org/wiki/Local_regression)
 
+Types of [smoothers] (http://www.ats.ucla.edu/stat/r/faq/smooths.htm) in ggplot2.
+
 ### Final notes
 
 A deep dive into [Bivariate Data Analysis] (http://dept.stat.lsa.umich.edu/~kshedden/Courses/Stat401/Notes/401-bivariate-slides.pdf).
 
 Create a [concept map] (http://www.mindmapinspiration.com/) examples
+
+[Bar Charts vs. Histograms] (http://flowingdata.com/2014/02/27/how-to-read-histograms-and-use-them-in-r/)
+
