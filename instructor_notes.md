@@ -297,6 +297,8 @@ Spread - generate multiple columns from two columns:
 Separate - split a column by a character string separator:
 
     separate(storms, date, c("year", "month", "day"), sep = "-")
+    
+    spread(subset(pf.fc_by_age_gender, select = c('gender', 'age', 'median_friend_count')), gender, median_friend_count)
 
 Unite columns into a single column.
 
@@ -320,6 +322,8 @@ pf.fc_by_age <- pf %>%
             n = n()) %>%
   arrange(age)
 ```
+
+Repeated use of `summarise()` and `group_by()`: The summarize function will automatically remove one level of grouping (the last group it collapsed).
 
 ### Gapminder Data 
 
@@ -401,6 +405,18 @@ p3 <- ggplot(aes(x = round(age/5)*5, y = friend_count),
 
 library('gridExtra')
 grid.arrange(p1, p2, p3, ncol = 1)
+
+### Full example code
+```r
+wineQuality = read.csv('wineQualityReds.csv')
+library('ggplot2')
+p3 <- ggplot(data = wineQuality, aes(x = fixed.acidity, y = citric.acid))
+last_plot()  + geom_point(alpha = 1/10)
+last_plot() + theme_classic()
+last_plot() + geom_smooth(method = 'lm')
+last_plot() + geom_line(stat = 'summary', fun.y = mean)
+last_plot() + geom_line(aes(color = gender), stat = 'summary', fun.y = median)
+```
 
 ### ggplot
 
@@ -494,3 +510,8 @@ Create a [concept map] (http://www.mindmapinspiration.com/) examples
 
 [Bar Charts vs. Histograms] (http://flowingdata.com/2014/02/27/how-to-read-histograms-and-use-them-in-r/)
 
+### Commands
+
+    cut(pf$year_joined, breaks = c(2004, 2008, 2010, 2012, 2014))
+    # will produce factor - (2004, 2008], (2008, 2010], ...
+    
