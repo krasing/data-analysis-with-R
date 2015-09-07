@@ -366,6 +366,7 @@ ggplot(aes(x = age, y = friend_count), data = pf) +
 ```
 
     geom_point(position='jitter')
+    geom_jitter(alpha = 1/4, shape = 21)
     
 ### Summaries
 
