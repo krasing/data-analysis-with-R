@@ -515,3 +515,19 @@ Create a [concept map] (http://www.mindmapinspiration.com/) examples
     cut(pf$year_joined, breaks = c(2004, 2008, 2010, 2012, 2014))
     # will produce factor - (2004, 2008], (2008, 2010], ...
     
+### A kind of time series
+
+[The Emotional Highs and Lows of the NFL Season] (https://www.facebook.com/notes/facebook-data-science/the-emotional-highs-and-lows-of-the-nfl-season/10152033221418859)
+
+### Instructor notes, Introducing the Yogurt Dataset
+
+[Bayesian Statistics and Marketing] (http://www.perossi.org/home/bsm-1) contains the data set and a case study on it.
+
+The citation for the original paper on the yogurt data set is Kim, Jaehwan, Greg M. Allenby, and Peter E. Rossi. "Modeling consumer demand for variety." Marketing Science 21.3 (2002): 229-250.
+
+A special thanks to Professor Allenby for helping us understand this data set.
+
+To learn more about scanner data, check out [Panel Data Discrete Choice Models of Consumer Demand] (http://www.nuff.ox.ac.uk/Economics/papers/2013/Panel%20Data%20Demand%20-%20June%2020,%202013.pdf)
+
+
+
