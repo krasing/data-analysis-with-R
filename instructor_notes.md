@@ -517,3 +517,13 @@ Create a [concept map] (http://www.mindmapinspiration.com/) examples
     # will produce factor - (2004, 2008], (2008, 2010], ...
     yo <- transform(yo,  all.purchases = strawberry + blueberry + pina.colada + plain + mixed.berry)
     # to transform data
+
+### Looking at samples of households (instructor notes)
+
+Note: `x %in% y` returns a logical (boolean) vector the same length as x that says whether each entry in x appears in y.
+That is, for each entry in x, it checks to see whether it is in y. 
+
+This allows us to subset the data so we get all the purchases occasions for the households in the sample. Then, we create scatterplots of price vs. time and facet by the sample id. 
+
+
+Use the `pch` or `shape` parameter to specify the symbol when plotting points. Scroll down to 'Plotting Points' on [QuickR's Graphical Parameters] (http://www.statmethods.net/advgraphs/parameters.html).
