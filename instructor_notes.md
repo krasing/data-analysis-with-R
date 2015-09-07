@@ -514,4 +514,5 @@ Create a [concept map] (http://www.mindmapinspiration.com/) examples
 
     cut(pf$year_joined, breaks = c(2004, 2008, 2010, 2012, 2014))
     # will produce factor - (2004, 2008], (2008, 2010], ...
-    
+    yo <- transform(yo,  all.purchases = strawberry + blueberry + pina.colada + plain + mixed.berry)
+    # to transform data
