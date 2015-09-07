@@ -527,3 +527,14 @@ This allows us to subset the data so we get all the purchases occasions for the 
 
 
 Use the `pch` or `shape` parameter to specify the symbol when plotting points. Scroll down to 'Plotting Points' on [QuickR's Graphical Parameters] (http://www.statmethods.net/advgraphs/parameters.html).
+
+```{r}
+set.seed(4230)
+sample.ids <- sample(levels(yo$id), 16)
+
+ggplot(aes(x = time, y = price),
+  data = subset(yo, id %in% sample.ids)) +
+  facet_wrap( ~ id) +
+  geom_line() +
+  geom_point(aes(size = all.purchases), pch = 1)
+```
