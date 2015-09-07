@@ -366,6 +366,7 @@ ggplot(aes(x = age, y = friend_count), data = pf) +
 ```
 
     geom_point(position='jitter')
+    geom_jitter(alpha = 1/4, shape = 21)
     
 ### Summaries
 
@@ -515,6 +516,9 @@ Create a [concept map] (http://www.mindmapinspiration.com/) examples
     cut(pf$year_joined, breaks = c(2004, 2008, 2010, 2012, 2014))
     # will produce factor - (2004, 2008], (2008, 2010], ...
     
+    yo <- transform(yo,  all.purchases = strawberry + blueberry + pina.colada + plain + mixed.berry)
+    # to transform data
+
 ### A kind of time series
 
 [The Emotional Highs and Lows of the NFL Season] (https://www.facebook.com/notes/facebook-data-science/the-emotional-highs-and-lows-of-the-nfl-season/10152033221418859)
@@ -529,5 +533,23 @@ A special thanks to Professor Allenby for helping us understand this data set.
 
 To learn more about scanner data, check out [Panel Data Discrete Choice Models of Consumer Demand] (http://www.nuff.ox.ac.uk/Economics/papers/2013/Panel%20Data%20Demand%20-%20June%2020,%202013.pdf)
 
+### Looking at samples of households (instructor notes)
+
+Note: `x %in% y` returns a logical (boolean) vector the same length as x that says whether each entry in x appears in y.
+That is, for each entry in x, it checks to see whether it is in y. 
+
+This allows us to subset the data so we get all the purchases occasions for the households in the sample. Then, we create scatterplots of price vs. time and facet by the sample id. 
 
 
+Use the `pch` or `shape` parameter to specify the symbol when plotting points. Scroll down to 'Plotting Points' on [QuickR's Graphical Parameters] (http://www.statmethods.net/advgraphs/parameters.html).
+
+```{r}
+set.seed(4230)
+sample.ids <- sample(levels(yo$id), 16)
+
+ggplot(aes(x = time, y = price),
+  data = subset(yo, id %in% sample.ids)) +
+  facet_wrap( ~ id) +
+  geom_line() +
+  geom_point(aes(size = all.purchases), pch = 1)
+```
