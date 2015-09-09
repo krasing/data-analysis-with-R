@@ -13,22 +13,22 @@ Note that the > symbol at the beginning of the line is R's prompt for you type s
 
 ## Usefull links
 
-[Loading data into R by Nathan Yau] (http://flowingdata.com/2015/02/18/loading-data-and-basic-formatting-in-r/)
+[Loading data into R by Nathan Yau](http://flowingdata.com/2015/02/18/loading-data-and-basic-formatting-in-r/)
 
-[Factor variables] (http://statistics.ats.ucla.edu/stat/r/modules/factor_variables.htm)
+[Factor variables](http://statistics.ats.ucla.edu/stat/r/modules/factor_variables.htm)
 
-Data mungling, [Tidy Data by Hadley Wickham] (http://vita.had.co.nz/papers/tidy-data.pdf)
+Data mungling, [Tidy Data by Hadley Wickham](http://vita.had.co.nz/papers/tidy-data.pdf)
 
-[Tidy Data Presentation by Hadley Wickham, June 2012] (http://courses.had.co.nz.s3-website-us-east-1.amazonaws.com/12-rice-bdsi/slides/07-tidy-data.pdf)
+[Tidy Data Presentation by Hadley Wickham, June 2012](http://courses.had.co.nz.s3-website-us-east-1.amazonaws.com/12-rice-bdsi/slides/07-tidy-data.pdf)
 
 
 ## People
 
 [Eytan Bakshy](http://www-personal.umich.edu/~ebakshy/)
 
-[Sean Taylor] (http://seanjtaylor.com/)
+[Sean Taylor](http://seanjtaylor.com/)
 
-[Lada Adamic] (http://www.ladamic.com/)
+[Lada Adamic](http://www.ladamic.com/)
 
 
 ## Packages used
@@ -101,9 +101,9 @@ Detecting anomalities is important. As example, more values for a default value 
        facet_wrap(~dob_month)
 
 ### Facets
-[Facets link] (http://www.cookbook-r.com/Graphs/Facets_(ggplot2)/)
+[Facets link](http://www.cookbook-r.com/Graphs/Facets_(ggplot2)/)
 By default all graphs have the same axes scales.
-This can be changed - [free scales] (http://www.cookbook-r.com/Graphs/Facets_(ggplot2))
+This can be changed - [free scales](http://www.cookbook-r.com/Graphs/Facets_(ggplot2))
 add parameter scales="free_y"
 
 
@@ -159,7 +159,7 @@ The parameter `fill` determines the color of the *area* inside objects in a plot
 
 You might notice how the color `black` and the hex code color of `#099DD9` (a shade of blue) are wrapped inside of `I()`. The `I()` functions stand for 'as is' and tells qplot to use them as colors. 
 
-Learn more about what you can adjust in a plot by reading the [ggplot theme documentation] (http://docs.ggplot2.org/0.9.2.1/theme.html) 
+Learn more about what you can adjust in a plot by reading the [ggplot theme documentation](http://docs.ggplot2.org/0.9.2.1/theme.html) 
 
 Equivalent ggplot syntax: 
 
@@ -191,9 +191,9 @@ Equivalent ggplot syntax:
     
 "Around 0:25 Chris mentions that the data is over-dispersed. "Over-dispersed" is always relative to some particular posited distribution. For example, data might be over-dispersed compared with a Poisson distribution with that mean."
 
-[Create Multiple Plots in One Image Output] (http://lightonphiri.org/blog/ggplot2-multiple-plots-in-one-graph-using-gridextra)
+[Create Multiple Plots in One Image Output](http://lightonphiri.org/blog/ggplot2-multiple-plots-in-one-graph-using-gridextra)
 
-[Add Log or Sqrt Scales to an Axis] (http://docs.ggplot2.org/current/scale_continuous.html)
+[Add Log or Sqrt Scales to an Axis](http://docs.ggplot2.org/current/scale_continuous.html)
 
     install.packages("gridExtra")
     # define individual plots
@@ -284,7 +284,7 @@ Data munging or data wrangling can take up much of a data scientist's or data an
 
 Review [Data Wrangling in R](#) to get a sense of how these packages allow you to manipulate data. You can use these packages to help you in the next programming task and in your future investigations.
 
-You may also download this useful [Data Wrangling Cheat Sheet] (http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf). There are some other useful cheat sheets at [RStudio] (http://www.rstudio.com/resources/cheatsheets/).
+You may also download this useful [Data Wrangling Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf). There are some other useful cheat sheets at [RStudio](http://www.rstudio.com/resources/cheatsheets/).
 
 Colapse multiple columns into two columns:
 
@@ -329,7 +329,7 @@ Repeated use of `summarise()` and `group_by()`: The summarize function will auto
 
 [Gapminder Data](http://www.gapminder.org/data/)
 
-[Hans Rosling's 200 Countries, 200 Years, 4 Minutes] (https://www.youtube.com/watch?v=jbkSRLYSojo) 
+[Hans Rosling's 200 Countries, 200 Years, 4 Minutes](https://www.youtube.com/watch?v=jbkSRLYSojo) 
 
 Save plots using ggsave()
 
@@ -339,11 +339,11 @@ If you want to exchange the rows and columns of your dataframe, it will also be 
 
 ### Exploring Your Friends' Birthdays
 
-[Download Your Friends' Birthdays from Facebook] (https://www.facebook.com/help/152652248136178/)
+[Download Your Friends' Birthdays from Facebook](https://www.facebook.com/help/152652248136178/)
 
-[Date Formats in R] (http://www.r-bloggers.com/date-formats-in-r)
+[Date Formats in R](http://www.r-bloggers.com/date-formats-in-r)
 
-[Export a Google Calendar] (https://support.google.com/calendar/answer/37111?hl=en)
+[Export a Google Calendar](https://support.google.com/calendar/answer/37111?hl=en)
 
 [Google Calendar to Excel: Free Trial](http://www.gcal2excel.com/)
 
@@ -421,9 +421,9 @@ last_plot() + geom_line(aes(color = gender), stat = 'summary', fun.y = median)
 
 ### ggplot
 
-[ggplot2 graphics] (http://docs.ggplot2.org/current/)
+[ggplot2 graphics](http://docs.ggplot2.org/current/)
 
-[ggplot2 tutorial by Ramon Saccilotto] (http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf)
+[ggplot2 tutorial by Ramon Saccilotto](http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf)
 
 geom_point(alpha = 1/20) 
 
@@ -437,15 +437,15 @@ Another warning: Version 0.4 of R has a bug when using the median function on th
 
 Learn more about the [dplyr package](http://blog.rstudio.org/2014/01/17/introducing-dplyr/). 
 
-[Introduction to dplyr] (http://rstudio-pubs-static.s3.amazonaws.com/11068_8bc42d6df61341b2bed45e9a9a3bf9f4.html) (knitted html file)
+[Introduction to dplyr](http://rstudio-pubs-static.s3.amazonaws.com/11068_8bc42d6df61341b2bed45e9a9a3bf9f4.html) (knitted html file)
 
 The following tutorials are presented by Hadley Wickham at useR 2014.
 
- - [Introduction of dplyr] (http://www.r-bloggers.com/hadley-wickham-presents-dplyr-at-user-2014/)
- - [dplyr Tutorial Part 1] (http://www.r-bloggers.com/hadley-wickhams-dplyr-tutorial-at-user-2014-part-1/)
- - [dplyr Tutorial Part 2] (http://www.r-bloggers.com/hadley-wickhams-dplyr-tutorial-at-user-2014-part-2/)
+ - [Introduction of dplyr](http://www.r-bloggers.com/hadley-wickham-presents-dplyr-at-user-2014/)
+ - [dplyr Tutorial Part 1](http://www.r-bloggers.com/hadley-wickhams-dplyr-tutorial-at-user-2014-part-1/)
+ - [dplyr Tutorial Part 2](http://www.r-bloggers.com/hadley-wickhams-dplyr-tutorial-at-user-2014-part-2/)
  
-There are other ways to work with data and create new data frames without using the dplyr package. Learn about the R functions `lapply`, `tapply`, and `split` in a [blog post] (http://rollingyours.wordpress.com/2014/10/20/the-lapply-command-101/).
+There are other ways to work with data and create new data frames without using the dplyr package. Learn about the R functions `lapply`, `tapply`, and `split` in a [blog post](http://rollingyours.wordpress.com/2014/10/20/the-lapply-command-101/).
 
 ### Instructor Notes
 
@@ -453,15 +453,15 @@ To zoom in, the code should use `thecoord_cartesian(xlim = c(13, 90))` layer rat
 
 Look up documentation for `coord_cartesian()` and `quantile()` if you're unfamiliar with them. 
 
-Try an example and practice problem for calculating [quantiles (percentiles)] (http://www.r-tutor.com/elementary-statistics/numerical-measures/percentile).
+Try an example and practice problem for calculating [quantiles (percentiles)](http://www.r-tutor.com/elementary-statistics/numerical-measures/percentile).
 
 See Moira's final plot and how she aligned the histograms with the scatterplots in the published paper.
 
-[Bernstein, M. S., Bakshy, E., Burke, M., & Karrer, B. (2013). Quantifying the invisible audience in social networks. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2013), pp. 21-30.] (http://hci.stanford.edu/publications/2013/invisibleaudience/invisibleaudience.pdf)
+[Bernstein, M. S., Bakshy, E., Burke, M., & Karrer, B. (2013). Quantifying the invisible audience in social networks. In Proceedings of the SIGCHI Conference on Human Factors in Computing Systems (CHI 2013), pp. 21-30.](http://hci.stanford.edu/publications/2013/invisibleaudience/invisibleaudience.pdf)
 
 ### Correlations
 
-[Correlation Methods: Pearson's r, Spearman's rho, and Kendall's tau] (http://www.statisticssolutions.com/correlation-pearson-kendall-spearman/)
+[Correlation Methods: Pearson's r, Spearman's rho, and Kendall's tau](http://www.statisticssolutions.com/correlation-pearson-kendall-spearman/)
 
 ### Instructor Notes
 
@@ -478,7 +478,7 @@ If R does not find a match for a parameter, it typically throws an "unused" para
 
 Type `str(functionName)` to find the order of the parameters and learn more about the parameters of an R function. 
 
-The example covered in the next few videos comes from a practice problem in [Weisberg, S. (2005). Applied Linear Regression, 3rd edition. New York: Wiley] (http://users.stat.umn.edu/~sandy/alr3ed/website/).
+The example covered in the next few videos comes from a practice problem in [Weisberg, S. (2005). Applied Linear Regression, 3rd edition. New York: Wiley](http://users.stat.umn.edu/~sandy/alr3ed/website/).
 
 ### Instructor notes
 
@@ -489,27 +489,27 @@ The cor and cor.test functions determine the strength of a linear relationship, 
 
 **Data Visualization Pioneers**
 
- - [John Tukey] (http://en.wikipedia.org/wiki/John_Tukey)
- - [William Playfair] (http://en.wikipedia.org/wiki/William_Playfair)
+ - [John Tukey](http://en.wikipedia.org/wiki/John_Tukey)
+ - [William Playfair](http://en.wikipedia.org/wiki/William_Playfair)
  - [William Playfair and the Psychology of Graphs](http://www.psych.utoronto.ca/users/spence/Spence%20(2006).pdf)
 
 There are other measures of associations that can detect this. The `dcor.ttest()` function in the energy package implements a non-parametric test of the independence of two variables. The test correctly rejects the independence.
 
 ### Smoothing conditional means
 
-[Local Regression (LOESS)] (http://simplystatistics.org/2014/02/13/loess-explained-in-a-gif/) explained visually on the [Simply Statistics] (http://simplystatistics.org/) blog.
+[Local Regression (LOESS)](http://simplystatistics.org/2014/02/13/loess-explained-in-a-gif/) explained visually on the [Simply Statistics](http://simplystatistics.org/) blog.
 
-The Details of [Loess and Lowess] (http://en.wikipedia.org/wiki/Local_regression)
+The Details of [Loess and Lowess](http://en.wikipedia.org/wiki/Local_regression)
 
-Types of [smoothers] (http://www.ats.ucla.edu/stat/r/faq/smooths.htm) in ggplot2.
+Types of [smoothers](http://www.ats.ucla.edu/stat/r/faq/smooths.htm) in ggplot2.
 
 ### Final notes
 
-A deep dive into [Bivariate Data Analysis] (http://dept.stat.lsa.umich.edu/~kshedden/Courses/Stat401/Notes/401-bivariate-slides.pdf).
+A deep dive into [Bivariate Data Analysis](http://dept.stat.lsa.umich.edu/~kshedden/Courses/Stat401/Notes/401-bivariate-slides.pdf).
 
-Create a [concept map] (http://www.mindmapinspiration.com/) examples
+Create a [concept map](http://www.mindmapinspiration.com/) examples
 
-[Bar Charts vs. Histograms] (http://flowingdata.com/2014/02/27/how-to-read-histograms-and-use-them-in-r/)
+[Bar Charts vs. Histograms](http://flowingdata.com/2014/02/27/how-to-read-histograms-and-use-them-in-r/)
 
 ### Commands
 
@@ -521,17 +521,17 @@ Create a [concept map] (http://www.mindmapinspiration.com/) examples
 
 ### A kind of time series
 
-[The Emotional Highs and Lows of the NFL Season] (https://www.facebook.com/notes/facebook-data-science/the-emotional-highs-and-lows-of-the-nfl-season/10152033221418859)
+[The Emotional Highs and Lows of the NFL Season](https://www.facebook.com/notes/facebook-data-science/the-emotional-highs-and-lows-of-the-nfl-season/10152033221418859)
 
 ### Instructor notes, Introducing the Yogurt Dataset
 
-[Bayesian Statistics and Marketing] (http://www.perossi.org/home/bsm-1) contains the data set and a case study on it.
+[Bayesian Statistics and Marketing](http://www.perossi.org/home/bsm-1) contains the data set and a case study on it.
 
 The citation for the original paper on the yogurt data set is Kim, Jaehwan, Greg M. Allenby, and Peter E. Rossi. "Modeling consumer demand for variety." Marketing Science 21.3 (2002): 229-250.
 
 A special thanks to Professor Allenby for helping us understand this data set.
 
-To learn more about scanner data, check out [Panel Data Discrete Choice Models of Consumer Demand] (http://www.nuff.ox.ac.uk/Economics/papers/2013/Panel%20Data%20Demand%20-%20June%2020,%202013.pdf)
+To learn more about scanner data, check out [Panel Data Discrete Choice Models of Consumer Demand](http://www.nuff.ox.ac.uk/Economics/papers/2013/Panel%20Data%20Demand%20-%20June%2020,%202013.pdf)
 
 ### Looking at samples of households (instructor notes)
 
@@ -541,7 +541,7 @@ That is, for each entry in x, it checks to see whether it is in y.
 This allows us to subset the data so we get all the purchases occasions for the households in the sample. Then, we create scatterplots of price vs. time and facet by the sample id. 
 
 
-Use the `pch` or `shape` parameter to specify the symbol when plotting points. Scroll down to 'Plotting Points' on [QuickR's Graphical Parameters] (http://www.statmethods.net/advgraphs/parameters.html).
+Use the `pch` or `shape` parameter to specify the symbol when plotting points. Scroll down to 'Plotting Points' on [QuickR's Graphical Parameters](http://www.statmethods.net/advgraphs/parameters.html).
 
 ```{r}
 set.seed(4230)
@@ -553,3 +553,29 @@ ggplot(aes(x = time, y = price),
   geom_line() +
   geom_point(aes(size = all.purchases), pch = 1)
 ```
+### Scatterplot matrix
+
+You'll need to run the code `install.packages('GGally')` to install the package for creating this partiular scatterplot matrix.
+
+If the plot takes a long time to render or if you want to see some of the scatterplot matrix, then only examine a smaller number of variables. You can use the following code or select fewer variables. We recommend including gender (the 6th variable)! 
+
+    pf_subset <- pf[ , c(2:7)] 
+
+You may also find that variable labels are on the outer edges of the scatterplot matrix, rather than on the diagonal. If you want labels in the diagonal, you can set the `axisLabels = 'internal'` argument in your ggpairs command.
+
+
+```r
+# install.packages(GGally)
+library(GGally)
+theme_set(theme_minimal(20))
+
+set.seed(1836)
+pf_subset <- pf[,c(2:15)]
+names(pf_subset)
+ggpairs(pf_subset[sample.int(nrow(pf_subset), 1000), ])
+```
+
+## Export pdf
+
+    library(rmarkdown)
+    render("lesson5_student.rmd", "pdf_document")
