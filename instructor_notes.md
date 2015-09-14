@@ -579,3 +579,38 @@ ggpairs(pf_subset[sample.int(nrow(pf_subset), 1000), ])
 
     library(rmarkdown)
     render("lesson5_student.rmd", "pdf_document")
+    
+### Instructor Notes
+
+[Log transform](http://www.r-statistics.com/2013/05/log-transformations-for-skewed-and-wide-distributions-from-practical-data-science-with-r/)
+
+[Defining a New Transformation in ggplot2 and the Scales Package](http://blog.ggplot2.org/post/25938265813/defining-a-new-transformation-for-ggplot2-scales)
+http://ggplot2.tumblr.com/post/29433173749/defining-a-new-transformation-for-ggplot2scales
+
+### Scales
+
+    library(scales)
+    scale_y_continuous(trans = log10_trans()) +
+    ggtitle('Price (log10) by Carat')
+
+### Create a new function
+
+[Basic Structure of a Function](https://www.youtube.com/watch?v=Z1wB1rHAYzQ&list=PLOU2XLYxmsIK9qQfztXeybpHvru-TrqAP)
+
+
+```r
+cuberoot_trans = function() trans_new('cuberoot', transform = function(x) x^(1/3),
+                                      inverse = function(x) x^3)
+```
+
+#### Use the custom function to scale axes
+
+```r
+ggplot(aes(carat, price), data = diamonds) + 
+  geom_point() + 
+  scale_x_continuous(trans = cuberoot_trans(), limits = c(0.2, 3),
+                     breaks = c(0.2, 0.5, 1, 2, 3)) + 
+  scale_y_continuous(trans = log10_trans(), limits = c(350, 15000),
+                     breaks = c(350, 1000, 5000, 10000, 15000)) +
+  ggtitle('Price (log10) by Cube-Root of Carat')
+```
