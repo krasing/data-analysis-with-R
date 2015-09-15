@@ -1,17 +1,7 @@
 
-## Swirl
-
-We recommend anyone new to R and RStudio to try Swirl (statistics with interactive R learning). Swirl is a software package for the R statistical programming language. Its purpose is to teach statistics and R commands interactively.
-
-Type the following commands in the Console, pressing Enter or Return after each line: 
-
-    install.packages("swirl") 
-    library(swirl) 
-    swirl()
-
-Note that the > symbol at the beginning of the line is R's prompt for you type something into the console. We include it here so you know that the above commands are to be typed into the console and not elsewhere. The part you type begins after >. 
-
 ## Usefull links
+
+[Useful cheat sheets at RStudio, e.g. ggplot2, shiny, dplyr and tidyr, etc](http://www.rstudio.com/resources/cheatsheets/).
 
 [Loading data into R by Nathan Yau](http://flowingdata.com/2015/02/18/loading-data-and-basic-formatting-in-r/)
 
@@ -57,6 +47,18 @@ Data mungling, [Tidy Data by Hadley Wickham](http://vita.had.co.nz/papers/tidy-d
     income <- read.csv("data/ACS_13_5YR_S1903/ACS_13_5YR_S1903.csv",
         stringsAsFactors=FALSE, sep=",", colClasses=c("GEO.id2"="character"))
 
+### Download and load data
+
+    #install.package('bitops')
+    #install.packages('RCurl')
+    library('bitops')
+    library('RCurl')
+
+    diamondsurl = getBinaryURL("https://raw.github.com/solomonm/diamonds-data/master/BigDiamonds.Rda")
+    load(rawConnection(diamondsurl))
+
+The python code used to obtain the data is available [here](https://github.com/solomonm/diamonds-data)
+
 ### Review data
 
     head(income)
@@ -79,6 +81,18 @@ Data mungling, [Tidy Data by Hadley Wickham](http://vita.had.co.nz/papers/tidy-d
     ses.order <- ordered(ses, levels = c("low", "middle", "high"))
     levels = c("low", "middle", "high")
     reddit$age.range <- factor(reddit$age.range, levels=levels, ordered = TRUE)
+
+## Swirl
+
+We recommend anyone new to R and RStudio to try Swirl (statistics with interactive R learning). Swirl is a software package for the R statistical programming language. Its purpose is to teach statistics and R commands interactively.
+
+Type the following commands in the Console, pressing Enter or Return after each line: 
+
+    install.packages("swirl") 
+    library(swirl) 
+    swirl()
+
+Note that the > symbol at the beginning of the line is R's prompt for you type something into the console. We include it here so you know that the above commands are to be typed into the console and not elsewhere. The part you type begins after >. 
 
 ## Single variables
 
@@ -284,7 +298,7 @@ Data munging or data wrangling can take up much of a data scientist's or data an
 
 Review [Data Wrangling in R](#) to get a sense of how these packages allow you to manipulate data. You can use these packages to help you in the next programming task and in your future investigations.
 
-You may also download this useful [Data Wrangling Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf). There are some other useful cheat sheets at [RStudio](http://www.rstudio.com/resources/cheatsheets/).
+You may also download this useful [Data Wrangling Cheat Sheet](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf). 
 
 Colapse multiple columns into two columns:
 
@@ -643,5 +657,12 @@ update model m1 to include carat in the regression
 
     mtable(m1, m2, m3, m4, m5)
     
-print model parameters (arranged in pretty table for several models)
+... print model parameters (arranged in pretty table for several models)
 
+More about linear models and how to interpret regression coefficients:
+
+  - [Interpreting Regression Coefficients in R on R Bloggers](http://www.r-bloggers.com/interpreting-regression-coefficient-in-r/?utm_source=feedburner&utm_medium=email&utm_campaign=Feed%3A+RBloggers+%28R+bloggers%29)
+  - [Interpreting Regression Coefficients on the Analysis Factor blog](http://www.theanalysisfactor.com/interpreting-regression-coefficients/)
+  - [Fitting and Interpreting Linear Models by yhat](http://blog.yhathq.com/posts/r-lm-summary.html)
+  - [Another Explanation of Factor Coefficients in Linear Models on Stats StackExchange](http://stats.stackexchange.com/a/24256)
+  
