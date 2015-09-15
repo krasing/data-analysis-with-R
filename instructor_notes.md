@@ -614,3 +614,34 @@ ggplot(aes(carat, price), data = diamonds) +
                      breaks = c(350, 1000, 5000, 10000, 15000)) +
   ggtitle('Price (log10) by Cube-Root of Carat')
 ```
+
+### Color palettes and legends
+
+ggplot2: [scale_colour_brewer](http://docs.ggplot2.org/current/scale_brewer.html)
+
+ggplot2: [Color Brewer Palettes and Safe Colors](http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/#palettes-color-brewer)
+
+ggplot2: [Legends](http://www.cookbook-r.com/Graphs/Legends_(ggplot2)/)
+
+### Linear Models
+
+[Linear Models and Operators in R](http://data.princeton.edu/R/linearModels.html)
+
+    m1 <- lm(I(log(price)) ~ I(carat^(1/3)), data = diamonds)
+    
+`I()` means *as is* - transform the variables before use in the regression
+
+    m2 <- update(m1, ~ . + carat)
+    
+update model m1 to include carat in the regression
+
+    m3 <- update(m2, ~ . + cut)
+    m4 <- update(m3, ~ . + color)
+    m5 <- update(m4, ~ . + clarity)
+    
+... models with increasing complexity
+
+    mtable(m1, m2, m3, m4, m5)
+    
+print model parameters (arranged in pretty table for several models)
+
