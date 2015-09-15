@@ -584,8 +584,9 @@ ggpairs(pf_subset[sample.int(nrow(pf_subset), 1000), ])
 
 [Log transform](http://www.r-statistics.com/2013/05/log-transformations-for-skewed-and-wide-distributions-from-practical-data-science-with-r/)
 
-[Defining a New Transformation in ggplot2 and the Scales Package](http://blog.ggplot2.org/post/25938265813/defining-a-new-transformation-for-ggplot2-scales)
-http://ggplot2.tumblr.com/post/29433173749/defining-a-new-transformation-for-ggplot2scales
+[Defining a New Transformation in ggplot2 and the Scales Package](http://ggplot2.tumblr.com/post/25938265813/defining-a-new-transformation-for-ggplot2scales)
+
+[Part 2](http://ggplot2.tumblr.com/post/29433173749/defining-a-new-transformation-for-ggplot2scales)
 
 ### Scales
 
