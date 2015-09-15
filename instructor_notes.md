@@ -579,25 +579,22 @@ ggpairs(pf_subset[sample.int(nrow(pf_subset), 1000), ])
 
     library(rmarkdown)
     render("lesson5_student.rmd", "pdf_document")
-    
-### Instructor Notes
+
+
+### Scales library
 
 [Log transform](http://www.r-statistics.com/2013/05/log-transformations-for-skewed-and-wide-distributions-from-practical-data-science-with-r/)
-
-[Defining a New Transformation in ggplot2 and the Scales Package](http://ggplot2.tumblr.com/post/25938265813/defining-a-new-transformation-for-ggplot2scales)
-
-[Part 2](http://ggplot2.tumblr.com/post/29433173749/defining-a-new-transformation-for-ggplot2scales)
-
-### Scales
 
     library(scales)
     scale_y_continuous(trans = log10_trans()) +
     ggtitle('Price (log10) by Carat')
 
-### Create a new function
+#### Create a new function
 
 [Basic Structure of a Function](https://www.youtube.com/watch?v=Z1wB1rHAYzQ&list=PLOU2XLYxmsIK9qQfztXeybpHvru-TrqAP)
 
+[Defining a New Transformation in ggplot2 and the Scales Package, Part 1](http://ggplot2.tumblr.com/post/25938265813/defining-a-new-transformation-for-ggplot2scales), 
+[Part 2](http://ggplot2.tumblr.com/post/29433173749/defining-a-new-transformation-for-ggplot2scales)
 
 ```r
 cuberoot_trans = function() trans_new('cuberoot', transform = function(x) x^(1/3),
