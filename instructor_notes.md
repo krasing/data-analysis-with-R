@@ -519,7 +519,7 @@ Create a [concept map](http://www.mindmapinspiration.com/) examples
     yo <- transform(yo,  all.purchases = strawberry + blueberry + pina.colada + plain + mixed.berry)
     # to transform data
     
-`geom_point(alpha=1/2, size=3/4, position='jitter')` = `geom_jitter(alpha=1/2, size=3/4)`
+`geom_jitter(alpha=1/2, size=3/4)` is equivalent to `geom_point(alpha=1/2, size=3/4, position='jitter')`
 
 ### A kind of time series
 
