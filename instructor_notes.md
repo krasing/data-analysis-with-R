@@ -666,3 +666,12 @@ More about linear models and how to interpret regression coefficients:
   - [Fitting and Interpreting Linear Models by yhat](http://blog.yhathq.com/posts/r-lm-summary.html)
   - [Another Explanation of Factor Coefficients in Linear Models on Stats StackExchange](http://stats.stackexchange.com/a/24256)
   
+## TMP
+
+    ## remove columns
+    cols <- c("X", "Y", "month", "day")
+    dataset1 <- dataset1[, !(names(dataset1)) %in% cols]
+    ## pairwise visualization
+    pairs(dataset1)
+    
+    
