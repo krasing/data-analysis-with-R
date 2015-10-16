@@ -674,4 +674,9 @@ More about linear models and how to interpret regression coefficients:
     ## pairwise visualization
     pairs(dataset1)
     
+    ## make categorical
+    df[,c("X", "Y")] <- lapply(df[,c("X", "Y"], as.factor)
     
+    ## quantize numerical variable
+    bins <- c(0, 2.5, 5, 7.5, 10)
+    df[,"Z"] <- cut(df[,"Z"], breaks = bins)
